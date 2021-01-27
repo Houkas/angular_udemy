@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExercicesComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    if(this.logClickNumber > 5){
+
+    }
+   }
 
   ngOnInit(): void {
   }
@@ -21,5 +25,19 @@ export class ExercicesComponent implements OnInit {
   deleteUserName(){
     this.userName = '';
   }
+
+  secretContent = false;
+  logClickNumber = 0;
+
+  displaySecretContent(){
+    this.secretContent= !this.secretContent;
+    this.logClickNumber = this.logClickNumber +1;
+  }
+
+  bgColor(){
+    return this.logClickNumber > 4 ? 'blue' : '';
+  }
+
+  
 
 }

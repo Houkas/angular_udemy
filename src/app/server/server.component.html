@@ -2,5 +2,6 @@
 <h3>Composant Server</h3>
 
 <p [ngStyle] = "{backgroundColor: getColor()}" [ngClass]="{online: serverStatus === 'online'}">
+    <!--ajout class online si serverstatus === 'online' -->
     {{ 'Server' }} avec Id {{ serverId }} is {{ getServerStatus() }}
 </p>

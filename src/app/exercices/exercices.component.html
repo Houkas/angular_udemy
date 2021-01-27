@@ -7,3 +7,7 @@
 
 <hr>
 <h2>Exercice : Les directives</h2>
+<button class="btn btn-primary" (click)="displaySecretContent()">Afficher les détails</button>
+<p *ngIf="secretContent; else noSecret" [ngClass]="{supCinq: logClickNumber > 4}" [ngStyle]="{backgroundColor:bgColor()}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dapibus lorem ex, at consequat metus dictum vitae. Suspendisse tempus varius interdum. Integer ac risus porttitor nulla laoreet posuere quis vitae tellus. Integer efficitur pellentesque ex, id vestibulum metus dapibus eu. Suspendisse aliquam a leo semper hendrerit. </p>
+<ng-template #noSecret><p></p></ng-template>
+<p>{{ logClickNumber }} </p>

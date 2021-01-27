@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   //selector: '[app-servers]',
-  selector: '.app-servers',
+  selector: '.app-servers', //composant en class
   /*template: `<app-server></app-server>
   <app-server></app-server>
   <p>Bonjour</p>`,/*Ecriture html*/
@@ -41,16 +41,6 @@ export class ServersComponent implements OnInit {
 
   onUpdateServerName(event: Event){
     this.serverName = (<HTMLInputElement>event.target).value;
-  }
-
-  userName = '';
-
-  onUpdateUserName(event: Event){
-    this.userName = (<HTMLInputElement>event.target).value;
-  }
-
-  deleteUserName(){
-    this.userName = '';
   }
   
 }
