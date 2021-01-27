@@ -1,3 +1,14 @@
-<app-server></app-server>
-<app-server></app-server>
+<h2>Cours : Composant serveurs</h2>
+<label for="">Nom du serveur</label>
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">  Liaison de données avec evenement-->
+<input type="text" class="form-control" [(ngModel)]="serverName"> <!--Liaison bidirectionnelle-->
+<!--<p>{{ serverName }}</p>-->
 
+
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Ajouter un serveur</button>
+<!--<p>{{ serverCreationStatus }}</p>-->
+<p *ngIf="serverCreated; else noServer">Le serveur a été créé, le nom du serveur est : {{ serverName }}</p><!--*ngIf est un condition en attribut-->
+<ng-template #noServer><p>Aucun serveur de créé</p></ng-template><!--*ngIf est un condition en attribut-->
+<app-server *ngFor="let server of servers"></app-server>
+
+<app-exercices></app-exercices>
