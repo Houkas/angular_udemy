@@ -8,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ExercicesComponent implements OnInit {
 
   constructor() {
-    if(this.logClickNumber > 5){
 
-    }
    }
 
   ngOnInit(): void {
@@ -27,15 +25,11 @@ export class ExercicesComponent implements OnInit {
   }
 
   secretContent = false;
-  logClickNumber = 0;
+  logClickNumber = [];
 
   displaySecretContent(){
     this.secretContent= !this.secretContent;
-    this.logClickNumber = this.logClickNumber +1;
-  }
-
-  bgColor(){
-    return this.logClickNumber > 4 ? 'blue' : '';
+    this.logClickNumber.push(this.logClickNumber.length + 1);//push ajoute un element à un tableau, length indique la longueur du tableau.
   }
 
   
