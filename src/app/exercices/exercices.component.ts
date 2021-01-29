@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './exercices.component.html',
   styleUrls: ['./exercices.component.css']
 })
+
 export class ExercicesComponent implements OnInit {
 
   constructor() {
@@ -32,6 +33,6 @@ export class ExercicesComponent implements OnInit {
     this.logClickNumber.push(this.logClickNumber.length + 1);//push ajoute un element à un tableau, length indique la longueur du tableau.
   }
 
-  
+  serverNC = [{type:'serverNormal',name:'test',content:'yes'}];
 
 }

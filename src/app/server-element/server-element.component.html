@@ -1,0 +1,8 @@
+<div class="panel">
+    <p class="panel-heading">Nom du serveur : {{ serv.name }}</p>
+    <div class="panel-body">
+        <p *ngIf="serv.type === 'serverNormal'" style="color:red;">{{ serv.content }}</p>
+        <em *ngIf="serv.type === 'serverBlue'">{{ serv.content }}</em>
+    </div>
+</div>
+

@@ -28,3 +28,11 @@
     {{ log }} 
 </p><!--Ici logClickNumber est un tableau, chaque element du tableau est un log-->
 <!-- exemple plus concret : let book of booklist -->
+
+<hr>
+
+<h2>Exercice : séparer l'app en composants</h2>
+
+
+<app-cockpit></app-cockpit>
+<app-server-element *ngFor="let serv of serverNC" [serv]="serv"></app-server-element>

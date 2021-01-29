@@ -1,8 +1,3 @@
-.supCinq{
-    padding:20px;
-    color:white;
-}
-
 em{
     color:blue;
 }
@@ -17,4 +12,8 @@ em{
     padding: 10px;
     border-bottom:solid 1px rgb(228, 228, 228);
 
+}
+
+.panel-body{
+    padding:10px;
 }
