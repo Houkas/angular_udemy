@@ -1,0 +1,9 @@
+.cockpit{
+    border: solid 1px rgb(0, 119, 255);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.cockpit strong{
+    color: rgb(0, 119, 255);
+}

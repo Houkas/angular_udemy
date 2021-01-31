@@ -17,3 +17,13 @@ em{
 .panel-body{
     padding:10px;
 }
+
+.server-element{
+    border: solid 1px rgb(211, 63, 63);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.server-element strong{
+    color: rgb(211, 63, 63);
+}

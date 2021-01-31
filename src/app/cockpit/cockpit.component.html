@@ -1,10 +1,20 @@
-<p style="color:blue">Add new Servers or blueprints</p>
+<div class="cockpit"><strong>Cockpit</strong>
 
-<label for="">Server Name</label>
-<input type="text" class="form-control" [(ngModel)]="serverN"><br>
+    <p style="color:blue">Add new Servers or blueprints</p>
 
-<label for="">Server Content</label>
-<input type="text" class="form-control" [(ngModel)]="serverC"><br>
+    <label for="">Server Name</label>
+    <!--<input type="text" class="form-control" [(ngModel)]="serverN"><br>-->
+    <input type="text" class="form-control" #serverNameInput><br> 
+    <!--Ici #serverNameInput est la definition d'une référence locale-->
+    <!-- On l'a récupere avec les evenements des bouttons (click) -->
 
-<button class="btn btn-dark" (click)="addServer()">Add server</button>
-<button class="btn btn-primary" (click)="addServerBlue()">Add server blueprint</button>
+    <label for="">Server Content</label>
+    <!--<input type="text" class="form-control" [(ngModel)]="serverC"><br>-->
+    <input type="text" class="form-control" #serverContentInput><br>
+
+    <button class="btn btn-dark" (click)="addServer(serverNameInput)">Add server</button>
+    <button class="btn btn-primary" (click)="addServerBlue(serverNameInput)">Add server blueprint</button> 
+    
+
+</div>
+

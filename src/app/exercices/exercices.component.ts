@@ -33,6 +33,22 @@ export class ExercicesComponent implements OnInit {
     this.logClickNumber.push(this.logClickNumber.length + 1);//push ajoute un element à un tableau, length indique la longueur du tableau.
   }
 
-  serverNC = [{type:'serverNormal',name:'test',content:'yes'}];
+  serverNCs = [];
+
+  addServer(serverData:{serverName: string, serverContent:string}){
+    this.serverNCs.push({type:'serverNormal', name: serverData.serverName, content:serverData.serverContent});
+  }
+
+  addServerBlue(serverData:{serverName: string, serverContent:string}){
+    this.serverNCs.push({type:'serverBlue', name:serverData.serverName, content:serverData.serverContent});
+  }
+
+  onChangeFirst(){
+    this.serverNCs[0].name = 'changed !';
+  }
+
+  onDestroyFirst(){
+    this.serverNCs.splice(0, 1);
+  }
 
 }

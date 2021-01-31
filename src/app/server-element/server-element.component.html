@@ -1,8 +1,15 @@
-<div class="panel">
-    <p class="panel-heading">Nom du serveur : {{ serv.name }}</p>
-    <div class="panel-body">
-        <p *ngIf="serv.type === 'serverNormal'" style="color:red;">{{ serv.content }}</p>
-        <em *ngIf="serv.type === 'serverBlue'">{{ serv.content }}</em>
+<div class="server-element">
+    <strong>Server-element</strong>
+    <div class="panel">
+        <!--<p class="panel-heading">Nom du serveur : {{ element.name }}</p>-->
+        <p class="panel-heading" #heading>Nom du serveur : {{ name }}</p>
+        <div class="panel-body">
+           <ng-content></ng-content>
+           <!--ng-content est une directive qui permet d'afficher
+             le contenu qu'il y a entre le selecteur <app-server-element> 
+             dans le composant exercices.component.html-->
+        </div>
     </div>
 </div>
+
 

@@ -34,5 +34,15 @@
 <h2>Exercice : séparer l'app en composants</h2>
 
 
-<app-cockpit></app-cockpit>
-<app-server-element *ngFor="let serv of serverNC" [serv]="serv"></app-server-element>
+<app-cockpit (serverCreated)="addServer($event)" (serverCreatedBlue)="addServerBlue($event)"></app-cockpit>
+<br>
+
+<button class="btn btn-warning" (click)="onChangeFirst()">Change the first server</button>
+
+<button class="btn btn-danger" (click)="onDestroyFirst()">Delete the frist server</button>
+
+<app-server-element *ngFor="let serverNC of serverNCs" [serv]="serverNC" [name]="serverNC.name">
+    <p *ngIf="serverNC.type === 'serverNormal'" style="color:red;">{{ serverNC.content }}</p>
+    <em *ngIf="serverNC.type === 'serverBlue'">{{ serverNC.content }}</em>
+</app-server-element> 
+<!-- La propriété [serv] est issue du server-element.ts via @Input qui permet de la recuperer en dehors de son composant et donc ici-->
